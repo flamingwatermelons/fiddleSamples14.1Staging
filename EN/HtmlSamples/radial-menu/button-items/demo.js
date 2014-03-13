@@ -21,7 +21,7 @@ $(function() {
                 height: "450px"
             });
 
-            $("#htmlEditor").igHtmlEditor("setContent", "The xamRadialMenu control is essentially a context menu presenting its items in a circular arrangement around a center button. The circular arrangement of the items speeds up items selection, because each item is equally positioned in relation to the center. The xamRadialMenu supports different item types for choosing numerical values, color values or performs actions. Sub-Items are also supported.<br/>By default the only visible part of the xamRadialMenu is the center button. When the user click on the center button, the xamRadialMenu opens and shows the root level menu items. Clicking on the center button when the root level items are shown closes the xamRadialMenu. To navigate Sub-Items the user should click the arrows in the outer ring and the corresponding sub-items group will be displayed. Clicking on the center button when a sub-items group is shown will display the items on the previous level.", "html");
+            $("#htmlEditor").igHtmlEditor("setContent", "The Radial Menu control is essentially a context menu presenting its items in a circular arrangement around a center button. The circular arrangement of the items speeds up items selection, because each item is equally positioned in relation to the center. The Radial Menu supports different item types for choosing numerical values, color values or performs actions. Sub-Items are also supported.<br/>By default the only visible part of the Radial Menu is the center button. When the user click on the center button, the Radial Menu opens and shows the root level menu items. Clicking on the center button when the root level items are shown closes the Radial Menu. To navigate Sub-Items the user should click the arrows in the outer ring and the corresponding sub-items group will be displayed. Clicking on the center button when a sub-items group is shown will display the items on the previous level.", "html");
 
             // create the radial menu
             $("#radialMenu").igRadialMenu({
@@ -47,7 +47,7 @@ $(function() {
             // create slider for the horizontal radial menu sizing
             $("#sliderWidth").slider({
                 min: 100,
-                max: 600,
+                max: 500,
                 value: 300,
                 step: 1,
                 slide: function (evt, ui) {
@@ -59,7 +59,7 @@ $(function() {
             // create slider for the vertical radial menu sizing
             $("#sliderHeight").slider({
                 min: 100,
-                max: 600,
+                max: 500,
                 value: 300,
                 step: 1,
                 slide: function (evt, ui) {

@@ -1,6 +1,25 @@
 $(function () {
-            var lastCliked = null;
+var lastCliked = null;
 
+        function setWedgeIndex(_index) {
+            if (lastCliked == null) return;
+            if (isNaN(_index)) {
+                alert("Please specify an integer value.");
+                return;
+            }
+            $("#radialMenu").igRadialMenu("itemOption", lastCliked, "wedgeIndex", _index);
+        }
+
+        function setWedgeSpan(_span) {
+            if (lastCliked == null) return;
+            if (isNaN(_span) || _span < -1) {
+                alert("Please specify an integer value bigger than 0.");
+                return;
+            }
+            $("#radialMenu").igRadialMenu("itemOption", lastCliked, "wedgeSpan", _span);
+        }
+
+        $(function () {
             function toggleBold() {
                 $("#htmlEditor").igHtmlEditor("executeAction", "bold");
                 var cbElement = document.getElementById("cbCloseOnClick");
@@ -17,31 +36,13 @@ $(function () {
                 }
             }
 
-            function setWedgeIndex(_index) {
-                if (lastCliked == null) return;
-                if (isNaN(_index)) {
-                    alert("Please specify an integer value.");
-                    return;
-                }
-                $("#radialMenu").igRadialMenu("itemOption", lastCliked, "wedgeIndex", _index);
-            }
-
-            function setWedgeSpan(_span) {
-                if (lastCliked == null) return;
-                if (isNaN(_span) || _span < -1) {
-                    alert("Please specify an integer value bigger than 0.");
-                    return;
-                }
-                $("#radialMenu").igRadialMenu("itemOption", lastCliked, "wedgeSpan", _span);
-            }
-
             // create the html editor
             $("#htmlEditor").igHtmlEditor({
                 width: "98%",
                 height: "450px"
             });
 
-            $("#htmlEditor").igHtmlEditor("setContent", "The xamRadialMenu control is essentially a context menu presenting its items in a circular arrangement around a center button. The circular arrangement of the items speeds up items selection, because each item is equally positioned in relation to the center. The xamRadialMenu supports different item types for choosing numerical values, color values or performs actions. Sub-Items are also supported.<br/>By default the only visible part of the xamRadialMenu is the center button. When the user click on the center button, the xamRadialMenu opens and shows the root level menu items. Clicking on the center button when the root level items are shown closes the xamRadialMenu. To navigate Sub-Items the user should click the arrows in the outer ring and the corresponding sub-items group will be displayed. Clicking on the center button when a sub-items group is shown will display the items on the previous level.", "html");
+            $("#htmlEditor").igHtmlEditor("setContent", "The Radial Menu control is essentially a context menu presenting its items in a circular arrangement around a center button. The circular arrangement of the items speeds up items selection, because each item is equally positioned in relation to the center. The Radial Menu supports different item types for choosing numerical values, color values or performs actions. Sub-Items are also supported.<br/>By default the only visible part of the Radial Menu is the center button. When the user click on the center button, the Radial Menu opens and shows the root level menu items. Clicking on the center button when the root level items are shown closes the Radial Menu. To navigate Sub-Items the user should click the arrows in the outer ring and the corresponding sub-items group will be displayed. Clicking on the center button when a sub-items group is shown will display the items on the previous level.", "html");
 
             // create the radial menu
             $("#radialMenu").igRadialMenu({
@@ -66,7 +67,7 @@ $(function () {
                             lastCliked = evt.item.name;
                             toggleItalic();
                         }
-                    },
+                    }
                 ]
             });
 
@@ -94,3 +95,4 @@ $(function () {
                 }
             });
         });
+});
