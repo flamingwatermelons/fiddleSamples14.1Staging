@@ -21,7 +21,7 @@ $(function() {
                 height: "450px"
             });
 
-            $("#htmlEditor").igHtmlEditor("setContent", "xamRadialMenu コントロールは、中央ボタンの周りに項目を表示するコンテキスト メニューです。項目を円形に配置することで項目をすばやく選択できます。各項目は中央に対して均等に配置されます。xamRadialMenu は、数値、色値、または操作を実行する項目タイプをサポートします。サブ項目もサポートします。<br/>デフォルトで、xamRadialMenu の中央ボタンのみを表示します。ユーザーが中央ボタンをクリックすると、xamRadialMenu が開き、ルート レベルのメニュー項目を表示します。ルート レベル項目が表示されたときに中央ボタンをクリックすると、xamRadialMenu が閉じます。サブ項目に移動するには、外部リングの矢印をクリックし対応するサブ項目グループを表示します。サブ項目グループが表示されたときに中央ボタンをクリックすると、以前のレベルの項目を表示します。", "html");
+            $("#htmlEditor").igHtmlEditor("setContent", "ラジアル メニュー コントロールは、中央ボタンの周りに項目を表示するコンテキスト メニューです。項目を円形に配置することで項目をすばやく選択できます。各項目は中央に対して均等に配置されます。ラジアル メニューは、数値、色値、または操作を実行する項目タイプをサポートします。サブ項目もサポートします。<br/>デフォルトで、ラジアル メニューの中央ボタンのみを表示します。ユーザーが中央ボタンをクリックすると、ラジアル メニューが開き、ルート レベルのメニュー項目を表示します。ルート レベル項目が表示されたときに中央ボタンをクリックすると、ラジアル メニューが閉じます。サブ項目に移動するには、外部リングの矢印をクリックし対応するサブ項目グループを表示します。サブ項目グループが表示されたときに中央ボタンをクリックすると、以前のレベルの項目を表示します。", "html");
 
             // create the radial menu
             $("#radialMenu").igRadialMenu({
@@ -47,7 +47,7 @@ $(function() {
             // create slider for the horizontal radial menu sizing
             $("#sliderWidth").slider({
                 min: 100,
-                max: 600,
+                max: 500,
                 value: 300,
                 step: 1,
                 slide: function (evt, ui) {
@@ -59,7 +59,7 @@ $(function() {
             // create slider for the vertical radial menu sizing
             $("#sliderHeight").slider({
                 min: 100,
-                max: 600,
+                max: 500,
                 value: 300,
                 step: 1,
                 slide: function (evt, ui) {

@@ -15,7 +15,7 @@ $(function () {
                 height: "450px"
             });
 
-            $("#htmlEditor").igHtmlEditor("setContent", "xamRadialMenu コントロールは、中央ボタンの周りに項目を表示するコンテキスト メニューです。項目を円形に配置することで項目をすばやく選択できます。各項目は中央に対して均等に配置されます。xamRadialMenu は、数値、色値、または操作を実行する項目タイプをサポートします。サブ項目もサポートします。<br/>デフォルトで、xamRadialMenu の中央ボタンのみを表示します。ユーザーが中央ボタンをクリックすると、xamRadialMenu が開き、ルート レベルのメニュー項目を表示します。ルート レベル項目が表示されたときに中央ボタンをクリックすると、xamRadialMenu が閉じます。サブ項目に移動するには、外部リングの矢印をクリックし対応するサブ項目グループを表示します。サブ項目グループが表示されたときに中央ボタンをクリックすると、以前のレベルの項目を表示します。", "html");
+            $("#htmlEditor").igHtmlEditor("setContent", "ラジアル メニュー コントロールは、中央ボタンの周りに項目を表示するコンテキスト メニューです。項目を円形に配置することで項目をすばやく選択できます。各項目は中央に対して均等に配置されます。ラジアル メニューは、数値、色値、または操作を実行する項目タイプをサポートします。サブ項目もサポートします。<br/>デフォルトで、ラジアル メニューの中央ボタンのみを表示します。ユーザーが中央ボタンをクリックすると、ラジアル メニューが開き、ルート レベルのメニュー項目を表示します。ルート レベル項目が表示されたときに中央ボタンをクリックすると、ラジアル メニューが閉じます。サブ項目に移動するには、外部リングの矢印をクリックし対応するサブ項目グループを表示します。サブ項目グループが表示されたときに中央ボタンをクリックすると、以前のレベルの項目を表示します。", "html");
 
             // create the radial menu
             $("#radialMenu").igRadialMenu({
@@ -26,7 +26,7 @@ $(function () {
                 [
                     {
                         type: "numericitem",
-                        header: "Font Size",
+                        header: "フォント サイズ",
                         iconUri: "http://jp.staging.igniteui.local/14-1/images/samples/radial-menu/Size.png",
                         value: "8",
                         items:
@@ -37,15 +37,14 @@ $(function () {
                                 ticks: "8pt,9pt,10pt,12pt,14pt,16pt,18pt",
                                 value: 8,
                                 valueChanged: function (evt, ui) {
-                                    alert("valueChanged - " + evt.newValue);
-                                    //setFontSize(evt.newValue);
+                                    setFontSize(evt.newValue);
                                 }
                             }
                         ]
                     },
                     {
                         type: "list",
-                        header: "Font",
+                        header: "フォント",
                         iconUri: "http://jp.staging.igniteui.local/14-1/images/samples/radial-menu/Font.png",
                         items:
                         [
